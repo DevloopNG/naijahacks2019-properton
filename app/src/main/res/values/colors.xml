@@ -6,7 +6,7 @@
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
     <color name="orange">#FF7F00</color>
-
+    <color name="blueGrey">#6699CC</color>
     <color name="dot_active">#D81B60</color>
     <color name="dot_inactive">#A8A4A4</color>
     <color name="textWhite">#f5f5f5</color>
