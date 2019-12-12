@@ -1,4 +1,4 @@
-package cc.properton.ui.settings
+package cc.properton.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -9,22 +9,16 @@ import androidx.lifecycle.ViewModelProviders
 import cc.properton.R
 import kotlinx.android.synthetic.main.activity_main.*
 
-class SettingsFragment : Fragment() {
-
-    private lateinit var notificationsViewModel: SettingsViewModel
-
+class InnerDashboardFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        notificationsViewModel =
-            ViewModelProviders.of(this).get(SettingsViewModel::class.java)
-        return inflater.inflate(R.layout.fragment_settings, container, false)
+        return inflater.inflate(R.layout.layout_inner_dashboard, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        activity!!.toolbar_title.text = "Settings"
     }
 }

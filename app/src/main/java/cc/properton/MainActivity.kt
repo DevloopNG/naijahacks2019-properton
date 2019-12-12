@@ -1,8 +1,10 @@
 package cc.properton
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.PopupMenu
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.findNavController
@@ -10,17 +12,18 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import cc.properton.utils.PrefManager
+import com.firebase.ui.auth.AuthUI
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_main.*
 
-class HomeActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var prefManager: PrefManager
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_home)
+        setContentView(R.layout.activity_main)
         prefManager = PrefManager(this)
         prefManager.isFirstLaunch = false
 
@@ -43,17 +46,34 @@ class HomeActivity : AppCompatActivity() {
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        val appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_settings)
-        )
-        setSupportActionBar(home_toolbar)
-        setupActionBarWithNavController(navController, appBarConfiguration)
-        navView.setupWithNavController(navController)
+//        val appBarConfiguration = AppBarConfiguration(
+//            setOf(R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_settings)
+//        )
+//        setupActionBarWithNavController(navController, appBarConfiguration)
 
-//        logout_btn.setOnClickListener {
-//            AuthUI.getInstance().signOut(this)
-//            startActivity(Intent(this, MainActivity::class.java))
-//            finish()
-//        }
+        setSupportActionBar(home_toolbar)
+
+        navView.setupWithNavController(navController)
+        home_profile.setOnClickListener {
+            val popupMenu = PopupMenu(this@MainActivity, it)
+            popupMenu.inflate(R.menu.profile_popup)
+            popupMenu.setOnMenuItemClickListener { menuItem ->
+                when (menuItem.itemId) {
+                    R.id.popup_view_profile -> {
+                        //Start Profile Activity
+                    }
+                    R.id.popup_logout -> {
+                        AuthUI.getInstance().signOut(this)
+                        startActivity(Intent(this, MainActivity::class.java))
+                        finish()
+                    }
+                }
+                true
+            }
+            popupMenu.show()
+        }
+        home_notification.setOnClickListener {
+            startActivity(Intent(this, NotificationActivity::class.java))
+        }
     }
 }
