@@ -14,7 +14,7 @@
         android:background="@color/fui_transparent"
         android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent"
-        android:elevation="5dp">
+        android:elevation="8dp">
 
         <androidx.appcompat.widget.Toolbar
             android:id="@+id/home_toolbar"
@@ -76,7 +76,6 @@
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="4dp"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toTopOf="@id/nav_view"
         app:layout_constraintLeft_toLeftOf="parent"
