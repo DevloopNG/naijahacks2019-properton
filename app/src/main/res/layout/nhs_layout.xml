@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="15sp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/fui_bgGitHub"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="APPLY VIA NATIONAL HOUSING FUNDS"
+        android:textColor="@color/white"
+        android:textSize="16sp" />
+
+    <Spinner
+        android:layout_marginTop="10dp"
+        android:id="@+id/spinner1"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:entries="@array/primary_mortgage_bank"
+        android:prompt="@string/country_prompt" />
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="20dp"
+        android:hint="Enter Your NHF Number Here"
+        android:background="@drawable/just_background"
+        android:gravity="center"
+      android:textStyle="italic"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="20dp"
+        android:hint="Enter Loan Amount"
+        android:background="@drawable/just_background"
+        android:gravity="center"
+        android:textStyle="italic"
+        android:padding="10dp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/blueGrey"
+        android:gravity="center"
+        android:text="UPLOAD YOUR DOCUMENTS"
+        android:padding="10dp"
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:hint="Click to understand document management"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="12sp" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/orange_button"
+        android:gravity="center"
+        android:text="APPLY"
+
+        android:textColor="@color/black"
+        android:textSize="16sp" />
+
+
+
+</LinearLayout>
