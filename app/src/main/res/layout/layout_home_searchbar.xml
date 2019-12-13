@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="40dp"
     android:background="@android:color/transparent"
+    android:focusableInTouchMode="true"
     android:gravity="center_vertical"
     android:orientation="horizontal">
 
@@ -51,7 +52,10 @@
             android:layout_height="44dp"
             android:layout_weight="0.9"
             android:background="@android:color/transparent"
-            android:hint="Search"
+            android:hint="search properties"
+            android:imeOptions="actionSearch"
+            android:inputType="text"
+            android:maxLines="2"
             tools:ignore="NestedWeights" />
     </LinearLayout>
 </LinearLayout>
