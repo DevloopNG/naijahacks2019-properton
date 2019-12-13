@@ -16,6 +16,8 @@ import androidx.core.content.ContextCompat
 import androidx.viewpager.widget.PagerAdapter
 import androidx.viewpager.widget.ViewPager
 import kotlinx.android.synthetic.main.activity_onboarding.*
+import kotlinx.android.synthetic.main.intro_slider5.*
+import kotlinx.android.synthetic.main.intro_slider5.view.*
 
 class OnboardingActivity : AppCompatActivity() {
 
@@ -38,7 +40,8 @@ class OnboardingActivity : AppCompatActivity() {
             R.layout.intro_slider1,
             R.layout.intro_slider2,
             R.layout.intro_slider3,
-            R.layout.intro_slider4
+            R.layout.intro_slider4,
+            R.layout.intro_slider5
         )
 
         // adding bottom dots
@@ -49,7 +52,10 @@ class OnboardingActivity : AppCompatActivity() {
         introPagerAdapter = IntroPagerAdapter()
         onboarding_view_pager!!.adapter = introPagerAdapter
         onboarding_view_pager!!.addOnPageChangeListener(viewPagerPageChangeListener)
-        btn_skip!!.setOnClickListener { launchHomeScreen() }
+        btn_skip!!.setOnClickListener {
+            onboarding_view_pager!!.currentItem = layouts!!.size - 1
+        }
+
         btn_next!!.setOnClickListener {
             // checking for last page
             // if last page home screen will be launched
@@ -114,7 +120,12 @@ class OnboardingActivity : AppCompatActivity() {
                 when (position) {
                     layouts!!.size - 1 -> {
                         // last page. make button text to GOT IT
-                        btn_next!!.text = getString(R.string.start)
+                        btn_next!!.visibility = View.GONE
+                        btn_skip!!.visibility = View.GONE
+                    }
+                    layouts!!.size - 2 -> {
+                        // last page. make button text to GOT IT
+                        btn_next!!.text = getString(R.string.intro_continue)
                         btn_skip!!.visibility = View.GONE
                     }
                     0 -> btn_prev!!.visibility = View.GONE
@@ -144,7 +155,6 @@ class OnboardingActivity : AppCompatActivity() {
             window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS)
             window.statusBarColor = Color.TRANSPARENT
         }
-
     }
 
     inner class IntroPagerAdapter : PagerAdapter() {
@@ -154,7 +164,20 @@ class OnboardingActivity : AppCompatActivity() {
             layoutInflater = getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
             val view = layoutInflater!!.inflate(layouts!![position], container, false)
             container.addView(view)
-
+            if (position == layouts!!.size - 1) {
+                view.intro_signup_btn.setOnClickListener {
+                    startActivity(
+                        Intent(
+                            this@OnboardingActivity,
+                            AuthenticationActivity::class.java
+                        )
+                    )
+                    finish()
+                }
+                view.intro_skip_account_btn.setOnClickListener {
+                    launchHomeScreen()
+                }
+            }
             return view
         }
 
