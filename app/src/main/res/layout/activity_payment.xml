@@ -84,21 +84,39 @@
                     android:layout_height="70dp"
                     android:textColor="@color/white"
                     android:layout_margin="4dp"
-                    android:text="VIA NHS"/>
+                    android:text="VIA NHF"/>
 
             </LinearLayout>
 
                 <LinearLayout
+                    android:orientation="horizontal"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_marginTop="8dp">
 
                     <include
+                    android:visibility="gone"
+                    android:layout_marginTop="15dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    layout="@layout/paystack_layout"/>
+
+                    <include
+                        android:visibility="gone"
                         android:layout_marginTop="15dp"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-                        layout="@layout/paystack_layout"/>
+                        layout="@layout/nhs_layout"/>
+
+                    <include
+                        android:visibility="gone"
+                        android:layout_marginTop="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        layout="@layout/direct_bank_payment_layout"/>
 
                 </LinearLayout>
 

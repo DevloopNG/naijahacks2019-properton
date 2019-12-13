@@ -8,4 +8,19 @@
         <item name="colorAccent">@color/colorAccent</item>
 <!--        <item name="android:windowBackground">@color/iconicWhite</item>-->
     </style>
+
+        <string name="country_prompt">Choose a country</string>
+        <string-array name="primary_mortgage_bank">
+            <item>Choose Your Primary Mortgage Bank</item>
+            <item>ABBEY BUILDING SOCIETY LIMITED </item>
+            <item>AG HOMES SAVINGS &amp; LOANS LIMITED </item>
+            <item>AKWA SAVINGS &amp; LOANS LIMITED </item>
+            <item>ASO SAVING &amp; LOANS PLC </item>
+            <item>BRENT MORTGAGE BANK </item>
+            <item>CENTAGE SAVINGS &amp; LOANS LIMITED </item>
+            <item>CITY CODE SAVINGS &amp; LOANS LIMITED </item>
+        </string-array>
+
+
+
 </resources>
