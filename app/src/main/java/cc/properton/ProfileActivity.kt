@@ -1,6 +1,7 @@
 package cc.properton
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import cc.properton.models.User
@@ -50,7 +51,7 @@ class ProfileActivity : AppCompatActivity() {
             finish()
         }
         edit_profile_btn.setOnClickListener {
-            startActivity(Intent(this, EditProfileActivity()))
+            startActivity(Intent(this@ProfileActivity, EditProfileActivity::class.java))
         }
     }
 }
