@@ -58,7 +58,7 @@
                 android:orientation="vertical">
 
                 <Button
-                    android:id="@+id/textView4"
+                    android:id="@+id/topup_wallet"
                     android:layout_width="match_parent"
                     android:layout_height="30dp"
                     android:background="@drawable/dashboard_tab_inactive"
@@ -245,7 +245,7 @@
                     android:id="@+id/textView7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Timeline" />
+                    android:text="Activities" />
 
                 <TextView
                     android:id="@+id/textView6"

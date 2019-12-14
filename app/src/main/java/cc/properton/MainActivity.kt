@@ -114,9 +114,10 @@ class MainActivity : AppCompatActivity() {
             when (menuItem.itemId) {
                 R.id.popup_view_profile -> {
                     //Start Profile Activity
+                    startActivity(Intent(this, ProfileActivity::class.java))
                 }
                 R.id.popup_edit_profile -> {
-                    startActivity(Intent(this, RegistrationActivity::class.java))
+                    startActivity(Intent(this, EditProfileActivity::class.java))
                 }
                 R.id.popup_login -> {
                     if (currentUser != null) {
