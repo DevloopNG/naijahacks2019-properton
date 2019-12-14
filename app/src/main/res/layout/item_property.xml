@@ -102,7 +102,6 @@
                     android:fontFamily="serif"
                     android:gravity="center"
                     android:textSize="13sp"
-                    android:singleLine="true"
                     tools:text="Gwarimpa, Abuja" />
 
                 <LinearLayout
@@ -121,7 +120,7 @@
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/textView21"
+                        android:id="@+id/item_property_investors"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
