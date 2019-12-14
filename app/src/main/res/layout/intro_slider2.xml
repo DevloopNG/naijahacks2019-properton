@@ -25,7 +25,7 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="Co-Own"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/black"
         android:textSize="24sp" />
 
     <TextView
