@@ -27,6 +27,7 @@ class PropertyAdapter(private val context: Context, val properties: ArrayList<Pr
             iv.item_property_location.text = property.location
             iv.item_property_amount.text = "NGN ${property.totalAmount}"
             iv.item_property_duration.text = "${Random().nextInt(24)} Months"
+            iv.item_property_investors.text = "${Random().nextInt(100)}"
             AppUtils.loadImageWithGlide(
                 context,
                 iv.item_property_image,
