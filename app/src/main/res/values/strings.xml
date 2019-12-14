@@ -9,7 +9,26 @@
     <string name="title_account">Account</string>
     <string name="title_settings">Settings</string>
     <string name="start">Start</string>
+    <string name="intro_continue">Continue</string>
     <string name="next">Next</string>
     <string name="prev">Prev</string>
     <string name="skip">Skip</string>
+
+    <string name="app_playstore_link_template">https://play.google.com/store/apps/details?id=%s</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="reset_password_status_failed">An error occurred while trying to send password reset link!</string>
+    <string name="reset_password_status_success">Password reset link successfully sent to your email address.</string>
+    <string name="password_reset_label">Enter your email address to get password reset link.</string>
+    <string name="verification_email_sent_to">A verification mail has been sent to this email address: <b> %s </b></string>
+    <string name="email_invitation_text">Send an email to the above email address(es) inviting them to join Stirps.</string>
+    <string name="sms_invitation_text">Send an sms to the above email address(es) inviting them to join Stirps.</string>
+    <string name="email_invite_user_advice">* Separate multiple email address with commas.</string>
+    <string name="sms_invite_user_advice">* Separate multiple phone numbers with commas.</string>
+    <string name="email_invite_placeholder_text">Enter email addresses</string>
+    <string name="sms_invite_placeholder_text">Enter phone numbers</string>
+    <string name="email_invite_header">Invite with Email</string>
+    <string name="sms_invite_header">Invite with SMS</string>
+    <string name="sms_user_warning">* Standard SMS charges may apply</string>
+    <string name="send_action_text">send</string>
+    <string name="cancel_action_text">cancel</string>
 </resources>
