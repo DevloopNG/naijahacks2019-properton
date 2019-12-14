@@ -19,7 +19,7 @@
         android:fontFamily="sans-serif-smallcaps"
         android:text="Smart Decisions"
         android:layout_gravity="center_horizontal"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/black"
         android:textSize="24sp" />
 
     <TextView
