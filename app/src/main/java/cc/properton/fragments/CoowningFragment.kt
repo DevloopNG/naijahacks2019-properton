@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import cc.properton.R
 import cc.properton.adapters.PropertyAdapter
+import cc.properton.utils.DummyData
 import kotlinx.android.synthetic.main.layout_co_owning.*
 
 class CoowningFragment : Fragment() {
@@ -20,6 +21,6 @@ class CoowningFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        co_properties_rv.adapter = PropertyAdapter(context!!)
+        co_properties_rv.adapter = PropertyAdapter(context!!,DummyData().getProperties(20))
     }
 }

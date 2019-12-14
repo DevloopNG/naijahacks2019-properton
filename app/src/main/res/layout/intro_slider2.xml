@@ -12,10 +12,10 @@
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="38dp"
+        android:layout_marginTop="50dp"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="10dp"
-        tools:srcCompat="@tools:sample/avatars"/>
+       android:src="@drawable/ic_undraw_team_page"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -25,7 +25,7 @@
         android:layout_marginEnd="8dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="Co-Own"
-        android:textColor="@color/colorPrimary"
+        android:textColor="@color/black"
         android:textSize="24sp" />
 
     <TextView

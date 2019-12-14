@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="180dp"
+    android:layout_height="200dp"
     android:layout_marginStart="8dp"
     android:layout_marginTop="8dp"
     android:layout_marginEnd="8dp"
     android:layout_marginBottom="8dp"
     android:orientation="vertical"
-    app:cardElevation="4dp"
     app:cardCornerRadius="5dp"
+    app:cardElevation="4dp"
     app:cardMaxElevation="8dp">
-
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -31,30 +29,30 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
+                android:id="@+id/item_property_title"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center"
-                android:text="3 Bedroom flat (with solar power)"
                 android:textColor="@color/white"
-                android:textSize="14dp" />
+                tools:text="3 Bedroom flat (with solar power)" />
 
             <TextView
                 android:id="@+id/item_property_time_left"
                 android:layout_width="0dp"
-                android:layout_weight="0.3"
                 android:layout_height="match_parent"
+                android:layout_weight="0.3"
+                android:background="@color/green"
                 android:gravity="center"
-                android:background="@color/orange"
                 android:padding="2dp"
                 android:text="345 days to go"
                 android:textColor="@color/white"
-                android:textSize="10dp" />
+                android:textSize="10sp" />
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="150dp"
+            android:layout_height="170dp"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -65,11 +63,12 @@
                 android:id="@+id/item_property_image"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
-                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
                 android:layout_weight="0.4"
+                android:scaleType="centerCrop"
+                android:src="@drawable/house_placeholder_1"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                tools:srcCompat="@tools:sample/avatars" />
+                app:layout_constraintTop_toTopOf="parent" />
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -78,15 +77,15 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/item_property_title"
+                    android:id="@+id/item_property_amount"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
                     android:fontFamily="sans-serif-light"
                     android:gravity="center"
-                    android:text="TextView"
                     android:textColor="@color/black"
-                    android:textSize="21sp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     tools:text="30 Million" />
 
@@ -95,80 +94,15 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="4dp"
+                    android:layout_marginEnd="4dp"
                     android:layout_marginBottom="8dp"
                     android:drawableStart="@drawable/ic_location_on_black_24dp"
+                    android:drawablePadding="4dp"
+                    android:ellipsize="marquee"
+                    android:fontFamily="serif"
                     android:gravity="center"
-                    android:text="TextView"
-                    tools:text=" Gwarimpa, Abuja" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:gravity="center">
-
-                    <TextView
-                        android:id="@+id/textView10"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Raised:"
-                        android:textColor="@color/orange"
-                        android:textStyle="bold" />
-
-                    <TextView
-
-                        android:id="@+id/item_percentage_raised"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="11dp"
-                        android:layout_weight="1"
-                        android:text="TextView"
-                        tools:text="65%" />
-                </LinearLayout>
-
-                <ProgressBar
-                    android:id="@+id/progressBar"
-                    style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
-                    android:layout_width="match_parent"
-                    android:layout_height="8dp"
-                    android:layout_gravity="bottom"
-                    android:progress="65"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:progressBackgroundTint="@color/orange"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.951"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.343" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="8dp"
-                    android:gravity="center">
-
-                    <TextView
-                        android:id="@+id/textView12"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:text="Completion:"
-                        android:textColor="@color/orange"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:id="@+id/item_property_completion"
-                        android:layout_width="0dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="10dp"
-                        android:layout_weight="1"
-                        android:text="TextView"
-                        tools:text="3.0%" />
-
-                </LinearLayout>
+                    android:textSize="13sp"
+                    tools:text="Gwarimpa, Abuja" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -181,18 +115,20 @@
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Area:"
-                        android:textColor="@color/orange"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Investors:"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/textView21"
+                        android:id="@+id/item_property_investors"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
                         android:layout_weight="1"
-                        android:text="TextView" />
+                        android:fontFamily="serif"
+                        android:text="0" />
                 </LinearLayout>
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -200,28 +136,68 @@
                     android:gravity="center">
 
                     <TextView
-                        android:id="@+id/textView20"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="Tenor:"
-                        android:textColor="@color/orange"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Duration:"
                         android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/textView15"
+                        android:id="@+id/item_property_duration"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="12dp"
                         android:layout_weight="1"
-                        android:text="TextView" />
+                        android:fontFamily="serif"
+                        android:text="5 months" />
                 </LinearLayout>
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.8"
+                        android:fontFamily="sans-serif-black"
+                        android:text="Raised:" />
+
+                    <TextView
+                        android:id="@+id/item_percentage_raised"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="11dp"
+                        android:layout_weight="1"
+                        android:fontFamily="serif"
+                        android:textSize="12sp"
+                        tools:text="65%" />
+                </LinearLayout>
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="8dp"
+                    android:progress="65"
+                    android:progressBackgroundTint="@color/orange"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.951"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.343" />
             </LinearLayout>
-
-
         </LinearLayout>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
