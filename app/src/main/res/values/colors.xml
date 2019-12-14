@@ -19,4 +19,5 @@
     <color name="grey">#dddddd</color>
     <color name="light_grey">#EBEBEB</color>
     <color name="pure_white">#ffffff</color>
+    <color name="green">#4caf50</color>
 </resources>
